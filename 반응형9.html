@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li{
+            list-style: none;
+        }
+        .wrap{
+            width: 1240px;
+            margin: 0 auto;
+        }
+
+        .list{}
+
+        .list li{
+            width: 400px;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+        .list li.mar{
+            margin: 0 20px;
+        }
+
+        .list li img{
+            width: 100%;
+        }
+
+        /* w768 아이패드 일때 */
+        @media screen and (max-width: 768px){
+            .wrap{
+                width: 90%;
+            }
+
+            .list li{
+                width: 48%;
+            }
+
+            .list li.mar{
+                margin: 0 0 20px 0 !important;
+            }
+
+            .list li:nth-child(odd){
+                margin-right: 4%;
+            }
+        }
+
+        /* w480 아이폰 일때 */
+        @media screen and (max-width: 480px){
+            .wrap{
+                width: 100%;
+            }
+
+            .list li{
+                width: 100%;
+                float: none;
+                margin-bottom: 20px;
+            }
+
+            .list li:nth-child(odd){
+                margin-right: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li><img src="source/animal01.png" alt="a1"></li>
+            <li class="mar"><img src="source/animal02.png" alt="a2"></li>
+            <li><img src="source/animal03.png" alt="a3"></li>
+            <li><img src="source/animal04.png" alt="a4"></li>
+            <li class="mar"><img src="source/animal05.png" alt="a5"></li>
+            <li><img src="source/animal06.png" alt="a6"></li>
+            <li><img src="source/animal07.png" alt="a7"></li>
+            <li class="mar"><img src="source/animal08.png" alt="a8"></li>
+            <li><img src="source/animal09.png" alt="a9"></li>
+        </ul>
+    </div>
+</body>
+</html>

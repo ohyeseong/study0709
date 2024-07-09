@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        .wrap{
+            height: 400px;
+            border: 5px solid #666;
+            padding: 20px;
+        }
+
+        .wrap .box{
+            font-size: 100px;
+        }
+
+        @media screen and (orientation: landscape){
+            body{
+                background-color: slategray;
+            }
+
+            .wrap .box{
+                font-size: 200px;
+            }
+            /* 자식한테 결과를 주려면 반응형에서는 원본의 경로를 알아야 인식되기 때문에 원본의경로를 다 적어줘야 한다 */
+        }
+
+        @media screen and(orientation: portrait){
+            body{
+                background-color: #666;
+                color: white;
+                font-weight: bold;
+            }
+        }
+
+        @media screen and(max-width: 400px){
+            .wrap{
+                background-color: green;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        wrapper
+        <div class="box">box</div>
+    </div>
+</body>
+</html>

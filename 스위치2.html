@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script lang="java">
+        $(document).ready(function () {
+
+            $(".click").click(function () {
+                var result = prompt("수치(1~5)를 입력해 주세요");
+
+                switch (result) {
+                    case "1":
+                        $(this).css({
+                            "color": "green",
+                            "background-color": "white"
+                        });
+                        break;
+                    case "2":
+                        $(this).css({
+                            "color": "yellow",
+                            "background-color": "white"
+                        });
+                        break;
+                    case "3":
+                        $(this).css({
+                            "color": "blue",
+                            "background-color": "white"
+                        });
+                        break;
+                    case "4":
+                        $(this).css({
+                            "color": "pink",
+                            "background-color": "white"
+                        });
+                        break;
+                    case "5":
+                        $(this).css({
+                            "color": "gray",
+                            "background-color": "white"
+                        });
+                        break;
+                    default:
+                        $(this).css({
+                            "background-color": "red",
+                        });
+                }
+            }) // click.click
+        }) // jQuery 끝
+
+        var a = Number(prompt("숫자1을 입력하세요"));
+        var b = Number(prompt("숫자2을 입력하세요"));
+        var op = prompt("연산자를 입력해주세요 + - * / %");
+
+        switch (op) {
+                case "+":
+                document.write(a + b);
+                break;
+
+                case "-":
+                document.write(a - b);
+                break;
+                
+                case "*":
+                document.write(a * b);
+                break;
+
+                case "/":
+                document.write(a / b);
+                break;
+
+                case "%":
+                document.write(a % b);
+                break;
+
+        }
+    </script>
+
+    <style type="text/css">
+        .click {
+            font-size: 30px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="click">click!</p>
+</body>
+
+</html>

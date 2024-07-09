@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script lang="java">
+        // switch(변수 또는 수식){
+        //     case 값1 :
+        //         수행할 문장1; break;
+        //         break를 거는건 밑으로 값이 내려가는것을 막기 위해서이다
+        //      case 값2 :
+        //      수행할 문장2; break;
+
+        //      case 값3 :
+        //      수행할 문장3; break;
+        //      ....
+        //      default :
+        //      나머지 수행할 문장;
+        //      default는 마지막이기에 break를 따로 걸 필요 없음
+        //      }
+
+        // var number = prompt("1에서 4중에 번호를 입력하세요");
+        // switch(number){
+        //     case "1" : 
+        //     // case 뒤에 쓰는 수는 글자로 인식되기에 수로 인식되어주기 위해 ""안에 기입해야 한다
+        //     document.write("예금조회를 선택했습니다"); break;
+
+        //     case "2" : 
+        //     document.write("예금출금을 선택했습니다"); break;
+        
+        //     case "3" : 
+        //     document.write("예금입금을 선택했습니다"); break;
+            
+        //     case "4" : 
+        //     document.write("예금이체을 선택했습니다"); break;
+
+        //     default :
+        //     document.write("번호를 잘못 입력하셨습니다");
+        // }
+
+        var menu = prompt("메뉴를 선택하세요 P, S, D, R중에서 입력")
+
+        switch(menu){
+            case "P" :
+            case "p" :
+                document.write("피자를 주문했습니다"); break;
+
+            case "S" :
+            case "s" :
+                document.write("셀러드를 주문했습니다"); break;
+
+            case "D" :
+            case "d" :
+                document.write("드링크를 주문했습니다"); break;
+
+            case "R" :
+            case "r" :
+                document.write("리조또를 주문했습니다"); break;
+            
+            default :
+            document.write("메뉴에 없습니다")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

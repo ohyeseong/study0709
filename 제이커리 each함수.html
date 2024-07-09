@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script lang="java">
+        $(document).ready(function(){
+            $(".list li").each(function(index){
+                console.log("index : ", index);
+                console.log("this : ", this);
+                console.log("this text : ", $(this).text());
+                console.log("this data : ", $(this).attr("data"));
+            })// .list li.each
+
+            $(".item li").each(function(){
+                var back = $(this).attr("bg");
+                $(this).css({"background":back});
+            })// .item li.each
+        })// jQuery 끝
+    </script>
+
+</head>
+<body>
+    <div class="box">
+        <h1>each event</h1>
+        <ul class="list">
+            <li class="first" data="1">1</li>
+            <li data="2">2</li>
+            <li data="3">3</li>
+        </ul>
+
+        <ul class="item">
+            <li bg="#f00">빨강</li>
+            <li bg="yellow">노랑</li>
+            <li bg="blue">파랑</li>
+            <li bg="pink">핑크</li>
+        </ul>
+    </div>
+</body>
+</html>

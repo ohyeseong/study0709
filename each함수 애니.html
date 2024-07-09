@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+
+    <script lang="java">
+        $(document).ready(function(){
+            var i = 0;
+            $(".event").each(function(i){
+                // each함수는 모든 명령어를 각각의 태그한테 넣어주겠다는 뜻
+
+                console.log("i :", i);
+                // 리스트의 수가 얼마나 있는 확인가능
+
+                $(this).delay(i*500)
+                // i가 index번호 0부터 1씩 증가할때마다 값을 각각한테 줌
+                .animate({left:"500px"}, 2000)
+                // 갔다가
+                .animate({left:"0px"}, 1000);
+                // 왔다
+            })// .event.each
+        })// jQuery 끝
+    </script>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li{
+            list-style: none;
+        }
+
+        body{
+            background-color: #555;
+            padding: 100px;
+        }
+
+        .list{
+            margin-top: 50px;
+        }
+        .event{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: gold;
+            margin-bottom: 20px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>each Event</h1>
+
+        <ul class="list">
+            <li class="event"></li>
+            <li class="event"></li>
+            <li class="event"></li>
+            <li class="event"></li>
+            <li class="event"></li>
+            <li class="event"></li>
+            <li class="event"></li>
+            <li class="event"></li>
+            <li class="event"></li>
+            <li class="event"></li>
+            <li class="event"></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            width: 1000px;
+            background-color: skyblue;
+            margin: 0 auto;
+        }
+
+        .wrap .left{
+            float: left;
+            width: 20%;
+            height: 400px;
+            background-color: aqua;
+        }
+        .wrap .right{
+            float: left;
+            width: 80%;
+            height: 400px;
+            /* background-color: hotpink; */
+        }
+
+        .wrap .right .box1{
+            height: 50%;
+            background-color: pink;
+        }
+        .wrap .right .box2{
+            height: 50%;
+            background-color: orangered;
+        }
+
+        /* w 1024까지 */
+        @media screen and (max-width: 1024px){
+            .wrap{
+                width: 90%;
+            }
+            .wrap .left{
+                width: 100%;
+                float: none;
+            }
+
+            .wrap .right{
+                width: auto;
+                float: none;
+            }
+
+            .wrap .right .box1{
+                height: 400px;
+            }
+
+            .wrap .right .box2{
+                height: 400px;
+            }
+        }
+
+        /* w 800까지 */
+        @media screen and (max-width: 800px){
+            .wrap{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left"></div>
+
+        <div class="right">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+    </div>
+</body>
+</html>

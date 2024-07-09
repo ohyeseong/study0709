@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        h1{
+            font-size: 30px;
+            color: red;
+            display: none;
+        }
+
+        @media screen and (orientation: landscape){
+        /* @media screen and (조건){결과} */
+            body{
+                background-color: yellowgreen;
+            }
+            .landscape{
+                display: block;
+                color: green;
+            }
+        }
+
+        @media screen and (orientation: portrait) {
+            body{
+                background-color: skyblue;
+            }
+            .portrait{
+                display: block;
+                color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="landscape">가로레이아웃</h1>
+    <h1 class="portrait">세로레이아웃</h1>
+</body>
+</html>

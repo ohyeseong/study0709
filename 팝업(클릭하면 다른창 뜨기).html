@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(document).ready(function(){
+
+            $(".close").click(function(){
+                $(".pop, .modal_pop").fadeOut();
+            })// .close.click
+
+            $(".pop_click").click(function(){
+                $(".pop, .modal_pop").fadeIn();
+            })
+
+        })// jQuery 끝
+    </script>
+
+    <style type="text/css">
+        html, body{
+            height: 100%;
+        }
+
+        .wrap{
+            width: 100%;
+            height: 700px;
+            background-color: pink;
+        }
+
+        .modal_pop{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .pop{
+            width: 500px;
+            height: 300px;
+            background-color: white;
+            border: 10px solid black;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <a href="#" class="pop_click">팝업</a>
+    </div>
+
+    <div class="modal_pop"></div>
+
+    <div class="pop">
+        <h3>title</h3>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus praesentium quasi a quaerat sapiente? Eaque, perspiciatis nobis, sapiente veniam impedit repudiandae numquam facilis provident, assumenda fugiat non quasi blanditiis. Debitis?
+        </p>
+        <button class="close">닫기X</button>
+    </div>
+</body>
+</html>

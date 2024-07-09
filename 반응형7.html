@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1{
+            width: 30%;
+            height: 300px;
+            background-color: skyblue;
+            float: left;
+        }
+        .box2{
+            width: 50%;
+            height: 300px;
+            background-color: rgb(22, 61, 255);
+            float: left;
+        }
+        .box3{
+            width: 20%;
+            height: 300px;
+            background-color: blueviolet;
+            float: left;
+        }
+
+        /* 
+        w1024까지 .box1 w30% / .box2 w70% / .box3 w100% float none
+        w800까지  .box1 100% / .box2 w100% float none / .box3 w100% float none
+         */
+        /* @media screen and (조건){결과} 에서 and와 ()는 띄어써야함 */
+
+        @media screen and (max-width: 1024px){
+            .box1{
+                width: 30%;
+            }
+
+            .box2{
+                width: 70%;
+            }
+
+            .box3{
+                width: 100%;
+                float: none;
+                clear: both;
+            }
+        }
+
+        @media screen and (max-width: 800px){
+            .box1{
+                width: 100%;
+            }
+
+            .box2{
+                width: 100%;
+                clear: both;
+                float: none;
+            }
+
+            .box3{
+                float: none;
+                clear: both;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</body>
+</html>

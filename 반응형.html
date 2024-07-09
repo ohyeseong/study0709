@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        /* 가로방향이 길면 배경색1로 */
+        /* 세로방향이 길면 배경색2로 바뀌게끔 */
+        
+        body{
+            background-color: skyblue;
+        }
+
+        h1{
+            color: #f1f1f1;
+        }
+
+        .wrap{
+            /* width: 1000px; */
+            /* px는 고정이라 반응형에 반응하지 않음 */
+            /* width: 90%; */
+            width: 90vw;
+            border: 5px solid black;
+            box-sizing: border-box;
+            height: 500px;
+        }
+
+        @media screen and (orientation :landscape){
+            /* orientation :landscape 가로방향이 길면 */
+            body{
+                background-color: red;
+            }
+            h1{
+                color: yellow;
+            }
+        }
+        /* @media screen는 반응형으로 잡아줄때 쓰임 */
+
+        @media screen and (orientation: portrait){
+            /* orientation: portrait 세로방향이 길면 */
+            body{
+                background-color: blueviolet;
+            }
+            h1{
+                color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+    </div><!-- .wrap -->
+
+    <h1>@ media Query</h1>
+</body>
+</html>
